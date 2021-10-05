@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./0habi.css">
+    <title>check-in</title>
+</head>
+<body>
+    <header>
+        <h1><a href="./1welcome.html" id="habilogo">habi</a></h1>
+        <img id="logoicon" src="./img/iconggroup.png" alt="chick hatching progression icons">
+        <menu>
+            <a class="active" href="./2checkin.html">check-in</a>
+            <a href="./3lists.html">lists</a>
+            <a href="./4timer.html">timer</a>
+        </menu>
+    </header>
+
+
+    <main>
+        <section id="check-in">
+            <div class="instructions" id="welcomeheader"> 
+                <h2>hello what's your name?</h2>
+            </div>
+            <form class="nameform">
+                <div id="welcomeinput">
+                    <label for="nicknameinput"></label>
+                    <input type="text" id="nicknameinput" placeholder="write your nickname..." name="Nickname" >
+                    <input type="submit" id="enterbutton" value="enter">
+                </div>
+            </form>
+            <div class="steptwo">
+                <div class="instructions">
+                    <h2>check-in:</h2> 
+                    <h2>how are you feeling?</h2>
+                </div>
+                <div class="container">
+                    <h2>I feel...</h2>
+                    <div id="feelings">
+                        <div >
+                            <img src="./img/Good.png" alt="">
+                            <p>good</p>
+                        </div>
+                        <div>
+                            <img src="./img/Okay.png" alt="">
+                            <p>okay</p>
+                        </div>
+                        <div>
+                            <img src="./img/Sick.png" alt="">
+                            <p>sick</p>
+                        </div>
+                        <div>
+                            <img src="./img/Sheet.png" alt="">
+                            <p>sheety</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stepthree">
+                <div class="response">
+                    <!-- Empty Response -->
+                    <div class="response">
+                        <div class="listItems col-12">
+                            <h2>
+
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="instructions">
+                    <h2>write yourself some affirmations</h2>
+                </div>
+                <form class="row">
+                    <div class="col-12 inputrow">
+                        <input id="affinput" type="text" placeholder="ex: I'm a bad bitch" name="To Dos">
+                        <input type="submit" id="addButton" value="+ add">
+                    </div>
+                </form>
+                <!-- Empty List -->
+                <div class="row">
+                    <div class="listItems col-12">
+                        <ul class="col-12 offset-0 col-sm-8 offset-sm-2 aff">
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="buttons">
+                <a class="button" id="backbutton" href="./1welcome.html">< back</a>
+                <a class="button" id="nextbutton" href="./3lists.html">next ></a>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+    </footer>
+    <script src="./checkin.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;600&display=swap');
+
+
+*{
+    font-family: 'Inconsolata', monospace;
+    box-sizing: border-box;
+}
+
+body{
+    width:100%;
+    background-color: #EFEFEF;
+}
+
+main{
+    width:80%;
+    max-width:600px;
+    margin:auto;
+}
+
+footer{
+    position: absolute;
+    bottom:0;
+    padding:20px;
+    display: block;
+    color:rgba(0, 0, 0, 0.3);
+}
+
+footer a{
+    color:coral
+}
+
+.button{
+    margin:20px 0px;
+    padding:20px;
+    color:black;
+    text-decoration: none;
+    border-radius: 5px;
+    float:right;
+}
+
+.button:hover{
+    font-weight: 600;
+}
+
+#welcomeinput input,
+#habitform input,
+#habitinput{
+    border:none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);;
+    padding:20px;
+    margin-top:10px;
+    width:100%;
+    font-size: 18px;
+}
+
+.instructions{
+    color:white;
+    font-size:20px;
+    padding:20px;
+    border-radius:10px 10px 0px 0px
+}
+
+#logo{
+    text-align: center;
+    font-weight:600;
+    font-size:18px;
+    padding-top:30px;
+}
+
+#logoicon{
+    width:80px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom: 30px
+}
+
+/* 1 Welcome */
+
+#welcomeheader{
+    background-color: #FD5252;
+}
+
+#buttonfooter{
+    display:flex;
+}
+
+#nextbutton {
+    border: 1px solid lightblue;
+}
+
+#nextbutton:hover {
+    background-color: #CCEB75;
+    font-weight: 600;
+    border: 1px solid #CCEB75;
+}
+
+/* 2 Habits */
+
+#habitheader{
+    background-color: #CCEB75;
+}
+
+#habitform{
+    display:inline-block;
+    width:100%
+}
+
+#backbutton {
+    margin:20px 0px;
+    padding:20px;
+    color:black;
+    text-decoration: none;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    float:left;
+}
+
+#backbutton:hover {
+    background-color: #FD5252;
+    border: 1px solid #FD5252;
+}
+
+/* 3 Tracker */
+
+#trackerheader{
+    background-color:#AFC7EC;
+}
+
+#enter {
+	transition: all 0.75s ease;
+	-webkit-transition: all 0.75s ease;
+	-moz-transition: all 0.75s ease;
+	-ms-transition: all 0.75s ease;
+	-o-transition: all 0.75 ease;
+}
+
+#enter:hover{
+	background-color: #02798F;
+	color: #FFCD5D;
+}
+
+#habitinput {
+    width:80%;
+}
+
+#addButton{
+    padding:20px;
+    margin-top:10px;
+    color:black;
+    text-decoration: none;
+    border-radius: 5px;
+    float:right;
+}
+
+ul {
+    margin-left:-40px;
+}
+
+li {
+	list-style: none;
+	padding: 20px 20px;
+	color: #ffffff;
+	text-transform: capitalize;
+	font-weight: 600;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	background: lightblue;
+}
+
+/* li:hover {
+	background: #76CFE0;
+}*/
+
+li > button {
+	font-weight: normal;
+	background: none;
+	border: none;
+	float: right;
+	color: #025f70;
+	font-weight: 800;
+} 
+
+
+/* makes clicked list items green */
+/* .done {
+	background: #51DF70 !important;
+	color: #00891E;
+} */
+
+.delete {
+	display: none;
+}

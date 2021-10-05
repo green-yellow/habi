@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;600;800&display=swap');
+
+*{
+    font-family: 'Inconsolata', monospace;
+    box-sizing: border-box;
+    border-radius:5px;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    font-weight: 400;
+    font-size:16px;
+}
+
+body{
+    width:100%;
+    max-width:600px;
+    margin:50px auto;
+    background-color: #EFEFEF;
+}
+
+header{
+    padding:10px 0px;
+    
+}
+
+menu{
+    display:flex;
+    align-items: center;
+    padding:0px;
+    justify-content: center;
+}
+
+menu a{
+    padding:5px 10px;
+    margin: 0px 5px;
+    text-decoration:none;
+    color:black;
+}
+
+menu .active{
+    background-color:lightblue;
+}
+
+menu a:hover{
+    background-color:#FFCF52;
+}
+
+main{
+    width:80%;
+    max-width:600px;
+    margin:auto;
+}
+
+checkbox{
+    
+}
+
+/* footer{
+    position: absolute;
+    bottom:0;
+    padding:20px;
+    display: block;
+    color:rgba(0, 0, 0, 0.3);
+}
+
+footer a{
+    color:coral
+} */
+
+.instructions{
+    background-color: #3D4959;
+    padding:10px 20px;
+    margin:20px 200px 10px 0px;
+    border-radius: 0px 5px 5px 5px;
+    color:white;
+}
+
+.container{
+    background-color: white;
+    padding:10px 20px;
+    width:100%;
+}
+
+.response{
+    background-color: #CCEB75;
+    padding:15px;
+    margin:20px 0px 10px 100px;
+    border-radius: 5px 0px 5px 5px;
+}
+
+.inputrow{
+    display:flex;
+}
+
+.steptwo,
+.stepthree{
+    display:none;
+}
+
+
+.listItems ul {
+    margin-left:-40px;
+}
+
+.col-12 li {
+	list-style: none;
+	padding: 20px 20px;
+	color: #ffffff;
+	text-transform: capitalize;
+	font-weight: 600;
+	margin-bottom: 10px;
+	background: lightblue;
+}
+
+li > button {
+	font-weight: normal;
+	background: none;
+	border: none;
+	float: right;
+	color: #025f70;
+	font-weight: 800;
+} 
+
+#habilogo{
+    text-align: right;
+    font-weight:800;
+    font-size:18px;
+    text-decoration: none;
+    color:black;
+}
+
+#logoicon{
+    width:100px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#feelings{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#feelings div{
+    padding: 5px 5px;
+    border: 1px transparent solid;
+}
+
+#feelings div:hover{
+    border: 1px gray solid;
+    font-weight:700;
+}
+
+#feelings img{
+    width:80px;
+    height:80px;
+    border:solid black 1px;
+    border-radius: 100px;
+}
+
+#feelings p{
+    text-align: center;
+    margin:0px;
+}
+
+/*INPUT STYLING*/
+#welcomeinput{
+    display:flex;
+}
+
+#welcomeinput input,
+#affinput,
+#habitinput{
+    border:none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding:20px;
+    margin-top:10px;
+    margin-right:5px;
+    width:100%;
+    font-size: 16px;
+}
+
+#welcomeinput input:hover,
+#affinput:hover,
+#habitinput:hover{
+    border:none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding:20px;
+    margin-top:10px;
+    width:100%;
+    font-size: 16px;
+}
+
+/*BUTTON STYLING*/
+.button{
+    margin:20px 0px;
+    padding:20px;
+    color:black;
+    text-decoration: none;
+    border: 1px solid lightblue;
+}
+
+.button:hover{
+    font-weight: 600;
+}
+
+.delete {
+	display: none;
+}
+
+.delete button{
+    color:blue;
+}
+
+#enterbutton,
+#addButton{
+    padding:20px;
+    margin-top:10px;
+    font-size:16px !important;
+    color:black;
+    text-decoration: none;
+    float:right;
+    border:1px solid transparent;
+    background-color: #FFCF52;
+    flex-basis: 30%;
+}
+
+#enterbutton:hover,
+#addButton:hover{
+    font-weight:700;
+    border:1px solid black important;
+}
+
+#backbutton {
+    float:left;
+}
+
+#backbutton:hover {
+    background-color: #FD5252;
+    border: 1px solid #FD5252;
+}
+
+#nextbutton {
+    float:right;
+}
+
+#nextbutton:hover {
+    background-color: #CCEB75;
+    border: 1px solid #CCEB75;
+}
+
+#enter {
+	transition: all 0.75s ease;
+	-webkit-transition: all 0.75s ease;
+	-moz-transition: all 0.75s ease;
+	-ms-transition: all 0.75s ease;
+	-o-transition: all 0.75 ease;
+}
+
+#enter:hover{
+	background-color: #02798F;
+	color: #FFCD5D;
+}
+

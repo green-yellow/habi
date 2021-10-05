@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./0habi.css">
+    <title>lists</title>
+</head>
+<body>
+    <header>
+        <h1><a href="./1welcome.html" id="habilogo">habi</a></h1>
+        <img id="logoicon" src="./img/iconggroup.png" alt="chick hatching progression icons">
+        <menu>
+            <a href="./2checkin.html">check-in</a>
+            <a class="active" href="./3lists.html">lists</a>
+            <a href="./4timer.html">timer</a>
+        </menu>
+    </header>
+    <main>
+        <div class="instructions"> 
+            <h2>add habits to your list</h2>
+        </div>
+        <form class="row">
+            <div class="col-12  inputrow">
+                <input id="habitinput" type="text" placeholder="New habit..." name="To Dos">
+                <input type="submit" id="addButton" value="+ add">
+            </div>
+        </form>
+        <!-- Empty List -->
+        <div class="row">
+            <div class="listItems col-12">
+                <ul class="col-12 offset-0 col-sm-8 offset-sm-2">
+                </ul>
+            </div>
+        </div>
+        <section id="buttons">
+            <a class="button" id="backbutton" href="./2checkin.html">< back</a>
+            <a class="button" id="nextbutton" href="./4timer.html">next ></a>
+        </section>
+    </main>
+    
+    <footer></footer>
+    <script src="./lists.js"></script>
+</body>
+</html>
