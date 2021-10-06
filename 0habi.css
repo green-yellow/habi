@@ -63,7 +63,9 @@ menu a:hover{
     background-color:#FFCF52;
 }
 
-checkbox{
+input [type="checkbox"]{
+    float:left;
+    width:50px;
 
 }
 

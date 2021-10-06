@@ -11,7 +11,6 @@ nameForm.addEventListener('submit', (e) => {
         .then(response => console.log('Success!', response))
         .then(() => {
             //This is where you write your code
-			console.log(stepTwo)
 			stepTwo.style.display = 'block'
             //Do not alter below this line
         })
@@ -74,7 +73,7 @@ function createListElement() {
 function addListAfterClick(){
 	if (inputLength() > 0) { //makes sure that an empty input field doesn't create a li
 		createListElement();
-		stepThree.style.display = 'block';
+		stepFour.style.display = 'block';
 	}
 }
 

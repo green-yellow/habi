@@ -13,10 +13,10 @@ form.addEventListener('submit', (e) => {
         .catch(error => console.error('Error!', error.message))
 })
 
-var addButton = document.getElementById("addButton");
-var input = document.getElementById("habitinput");
-var ul = document.querySelector("ul");
-var item = document.getElementsByTagName("li");
+const addButton = document.getElementById("addButton");
+const input = document.getElementById("habitinput");
+const ul = document.querySelector("ul");
+const item = document.getElementsByTagName("li");
 
 function inputLength(){
 	return input.value.length;
@@ -33,7 +33,7 @@ function createListElement() {
 	input.value = ""; //Reset text input field
 
 	function addClass(){
-		li.className += "drag"
+		li.className += "checkbox"
 	}
 
 	//START STRIKETHROUGH
@@ -47,7 +47,7 @@ function createListElement() {
 
 
 	// START ADD DELETE BUTTON
-	var dBtn = document.createElement("button");
+	const dBtn = document.createElement("button");
 	dBtn.appendChild(document.createTextNode("X"));
 	li.appendChild(dBtn);
 	dBtn.addEventListener("click", deleteListItem);
@@ -60,17 +60,26 @@ function createListElement() {
 	//END ADD CLASS DELETE
 
     // START ADD CHECKBOXES
-	const checkBtn = document.createElement("input")
-    checkBtn.setAttribute("type","checkbox")
-	li.appendChild(checkBtn)
+	//ADD NEW div.checkbox
+	const addCheck = document.createElement("div")
+		addCheck.classList.add("checkbox")
+		li.appendChild(addCheck)
 
-    const checkBtn1 = document.createElement("input")
-    checkBtn1.setAttribute("type","checkbox")
-	li.appendChild(checkBtn1)
+	const checkBox = document.querySelector(".checkbox")
+	//
+	function addCheckboxes() {
+		const checkBtn = document.createElement("input")
+		checkBtn.setAttribute("type","checkbox")
+		checkBox.appendChild(checkBtn)
 
-    const checkBtn2 = document.createElement("input")
-    checkBtn2.setAttribute("type","checkbox")
-	li.appendChild(checkBtn2)
+		const checkBtn1 = document.createElement("input")
+		checkBtn1.setAttribute("type","checkbox")
+		checkBox.appendChild(checkBtn1)
+
+		const checkBtn2 = document.createElement("input")
+		checkBtn2.setAttribute("type","checkbox")
+		checkBox.appendChild(checkBtn2)
+	}
 
 	// checkBtn.addEventListener("click", )
 	// END ADD CHECKBOXES
