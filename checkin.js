@@ -2,6 +2,7 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbyV3fR-RUpM-e4a30RW2n
 const nameForm = document.querySelector('.nameform')
 const stepTwo = document.querySelector(`.steptwo`)
 const stepThree = document.querySelector(`.stepthree`)
+const stepFour = document.querySelector(`.stepfour`)
 
 
 nameForm.addEventListener('submit', (e) => {
@@ -19,10 +20,8 @@ nameForm.addEventListener('submit', (e) => {
 
 stepTwo.addEventListener('click', (e) => {
 	e.preventDefault
-	console.log(stepTwo)
 	stepThree.style.display = 'block'
 })
-
 
 //JS for Lists Section
 const addButton = document.getElementById("addButton");
@@ -57,7 +56,7 @@ function createListElement() {
 
 
 	// START ADD DELETE BUTTON
-	var dBtn = document.createElement("button");
+	const dBtn = document.createElement("button");
 	dBtn.appendChild(document.createTextNode("X"));
 	li.appendChild(dBtn);
 	dBtn.addEventListener("click", deleteListItem);
@@ -68,12 +67,14 @@ function createListElement() {
 		li.classList.add("delete")
 	}
 	//END ADD CLASS DELETE
+	
 }
 
 
 function addListAfterClick(){
 	if (inputLength() > 0) { //makes sure that an empty input field doesn't create a li
 		createListElement();
+		stepThree.style.display = 'block';
 	}
 }
 

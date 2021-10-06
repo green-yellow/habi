@@ -32,6 +32,9 @@ function createListElement() {
 	ul.appendChild(li); //adds li to ul
 	input.value = ""; //Reset text input field
 
+	function addClass(){
+		li.className += "drag"
+	}
 
 	//START STRIKETHROUGH
 	// because it's in the function, it only adds it for new items
@@ -69,7 +72,7 @@ function createListElement() {
     checkBtn2.setAttribute("type","checkbox")
 	li.appendChild(checkBtn2)
 
-	checkBtn.addEventListener("click", )
+	// checkBtn.addEventListener("click", )
 	// END ADD CHECKBOXES
 
 

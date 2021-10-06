@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1><a href="./1welcome.html" id="habilogo">habi</a></h1>
+        <h1><a href="#" id="habilogo">habi</a></h1>
         <img id="logoicon" src="./img/iconggroup.png" alt="chick hatching progression icons">
         <menu>
             <a href="./2checkin.html">check-in</a>
@@ -19,23 +19,25 @@
     </header>
     <main>
         <div class="instructions"> 
-            <h2>timer</h2>
+            <h2>focus or meditate</h2>
         </div>
-        <form name="form_main">
-            <div>
-              <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">000</span>
+        <form name="form_main" class=container>
+            <div class="timer">
+                <span id="minute">00</span>:<span id="second">00</span>
             </div>
-          
-            <br />
-          
-            <button type="button" name="start">start</button>
-            <button type="button" name="pause">pause</button>
-            <button type="button" name="reset">reset</button>
-          </form>
 
-        <section id="buttons">
+            <div class="timerbuttons">        
+                <button type="button" name="start" class="button" id="start">start</button>
+                <button type="button" name="pause" class="button" id="pause">pause</button>
+                <button type="button" name="reset" class="button" id="reset">reset</button>
+            </div> 
+            
+          </form>
+  
+
+        <div id="buttons">
             <a class="button" id="backbutton" href="./3lists.html">< back</a>
-        </section>
+        </div>
     </main>
     
     <footer></footer>

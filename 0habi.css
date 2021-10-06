@@ -3,7 +3,6 @@
 *{
     font-family: 'Inconsolata', monospace;
     box-sizing: border-box;
-    border-radius:5px;
 }
 
 h1{
@@ -11,20 +10,34 @@ h1{
 }
 
 h2{
-    font-weight: 400;
+    font-weight: 600;
     font-size:16px;
+    line-height:1.5em;
 }
 
 body{
     width:100%;
     max-width:600px;
-    margin:50px auto;
-    background-color: #EFEFEF;
+    margin: 50px auto;  
+    /* background: linear-gradient(to left, #c9d6ff, #e2e2e2); */
+    background: linear-gradient(to right, #c9ffbf, #ffafbd);
+
+}
+
+header,
+main{
+    padding:10px 30px;
+    background-color: white;
 }
 
 header{
-    padding:10px 0px;
-    
+    border-radius:5px 5px 0px 0px;
+}
+main{
+    border-radius:0px 0px 5px 5px;
+    padding-bottom:100px;
+    margin-bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 menu{
@@ -39,6 +52,7 @@ menu a{
     margin: 0px 5px;
     text-decoration:none;
     color:black;
+    border-radius: 5px;
 }
 
 menu .active{
@@ -49,27 +63,9 @@ menu a:hover{
     background-color:#FFCF52;
 }
 
-main{
-    width:80%;
-    max-width:600px;
-    margin:auto;
-}
-
 checkbox{
-    
-}
 
-/* footer{
-    position: absolute;
-    bottom:0;
-    padding:20px;
-    display: block;
-    color:rgba(0, 0, 0, 0.3);
 }
-
-footer a{
-    color:coral
-} */
 
 .instructions{
     background-color: #3D4959;
@@ -83,13 +79,28 @@ footer a{
     background-color: white;
     padding:10px 20px;
     width:100%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
 }
 
 .response{
     background-color: #CCEB75;
-    padding:15px;
-    margin:20px 0px 10px 100px;
+    padding:10px 20px;
+    margin:20px 0px 10px 300px;
     border-radius: 5px 0px 5px 5px;
+}
+
+.timerbuttons{
+    display: flex;
+    justify-content: space-around;
+    width:50%;
+    margin:auto;
+}
+
+.timer{
+    text-align: center;
+    font-size:30px;
+    padding:20px;
 }
 
 .inputrow{
@@ -97,7 +108,8 @@ footer a{
 }
 
 .steptwo,
-.stepthree{
+.stepthree,
+.stepfour{
     display:none;
 }
 
@@ -109,99 +121,31 @@ footer a{
 .col-12 li {
 	list-style: none;
 	padding: 20px 20px;
-	color: #ffffff;
+	color: black;
 	text-transform: capitalize;
 	font-weight: 600;
 	margin-bottom: 10px;
 	background: lightblue;
+    border-radius: 5px;
 }
 
 li > button {
-	font-weight: normal;
+	font-weight: 400;
 	background: none;
 	border: none;
 	float: right;
-	color: #025f70;
+	color: black;
 	font-weight: 800;
 } 
 
-#habilogo{
-    text-align: right;
-    font-weight:800;
-    font-size:18px;
-    text-decoration: none;
-    color:black;
-}
-
-#logoicon{
-    width:100px;
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-}
-
-#feelings{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-#feelings div{
-    padding: 5px 5px;
-    border: 1px transparent solid;
-}
-
-#feelings div:hover{
-    border: 1px gray solid;
-    font-weight:700;
-}
-
-#feelings img{
-    width:80px;
-    height:80px;
-    border:solid black 1px;
-    border-radius: 100px;
-}
-
-#feelings p{
-    text-align: center;
-    margin:0px;
-}
-
-/*INPUT STYLING*/
-#welcomeinput{
-    display:flex;
-}
-
-#welcomeinput input,
-#affinput,
-#habitinput{
-    border:none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding:20px;
-    margin-top:10px;
-    margin-right:5px;
-    width:100%;
-    font-size: 16px;
-}
-
-#welcomeinput input:hover,
-#affinput:hover,
-#habitinput:hover{
-    border:none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding:20px;
-    margin-top:10px;
-    width:100%;
-    font-size: 16px;
-}
-
 /*BUTTON STYLING*/
 .button{
-    margin:20px 0px;
     padding:20px;
     color:black;
     text-decoration: none;
     border: 1px solid lightblue;
+    border-radius: 5px;
+    background-color: white;
 }
 
 .button:hover{
@@ -216,6 +160,10 @@ li > button {
     color:blue;
 }
 
+#buttons{
+    margin-top:50px;
+}
+
 #enterbutton,
 #addButton{
     padding:20px;
@@ -226,7 +174,7 @@ li > button {
     float:right;
     border:1px solid transparent;
     background-color: #FFCF52;
-    flex-basis: 30%;
+    flex-basis: 20%;
 }
 
 #enterbutton:hover,
@@ -265,4 +213,83 @@ li > button {
 	background-color: #02798F;
 	color: #FFCD5D;
 }
+
+#start{
+    background-color: #CCEB75;
+}
+#pause{
+    background-color: #FFCF52;
+}
+#reset{
+    background-color: #FD5252;
+}
+/*END BUTTON STYLING*/
+
+#habilogo{
+    text-align: right;
+    font-weight:800;
+    font-size:18px;
+    text-decoration: none;
+    color:black;
+}
+
+#logoicon{
+    width:100px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#feelings{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#feelings div{
+    padding: 10px 10px;
+    border: 2px transparent solid;
+    border-radius:5px;
+}
+
+#feelings div:hover{
+    border: 2px gray solid;
+    font-weight:700;
+}
+
+#feelings div:visited,
+#feelings a:visited{
+    border: 2px black solid;
+    font-weight:700;
+}
+
+#feelings img{
+    width:80px;
+    height:80px;
+    border:solid black 1px;
+    border-radius: 100px;
+}
+
+#feelings p{
+    text-align: center;
+    margin:0px;
+}
+
+/*INPUT STYLING*/
+#welcomeinput{
+    display:flex;
+}
+
+#nicknameinput,
+#affinput,
+#habitinput{
+    border:lightgray solid 1px;
+    border-radius: 5px;
+    padding:20px;
+    margin-top:10px;
+    margin-right:5px;
+    width:100%;
+    font-size: 16px;
+}
+
+
 

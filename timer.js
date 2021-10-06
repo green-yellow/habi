@@ -1,9 +1,7 @@
 "use strict";
 
-let hour = 0;
 let minute = 0;
 let second = 0;
-let millisecond = 0;
 
 let cron;
 
@@ -21,35 +19,60 @@ function start() {
   }
   
   function reset() {
-    hour = 0;
     minute = 0;
     second = 0;
-    millisecond = 0;
-    document.getElementById('hour').innerText = '00';
-    document.getElementById('minute').innerText = '00';
+    document.getElementById('minute').innerText = '25';
     document.getElementById('second').innerText = '00';
-    document.getElementById('millisecond').innerText = '000';
   }
 
   function timer() {
-    if ((millisecond += 10) == 1000) {
-      millisecond = 0;
-      second++;
-    }
+
     if (second == 60) {
       second = 0;
-      minute++;
+      minute--;
     }
     if (minute == 60) {
       minute = 0;
-      hour++;
+      hour--;
     }
-    document.getElementById('hour').innerText = returnData(hour);
     document.getElementById('minute').innerText = returnData(minute);
     document.getElementById('second').innerText = returnData(second);
-    document.getElementById('millisecond').innerText = returnData(millisecond);
   }
   
   function returnData(input) {
     return input > 10 ? input : `0${input}`
   }
+
+
+  {  // to isolate the scope of your code from any existing code.
+    const TICK_RESOLUTION = 1000; // in ms
+    const TIMER_LENGTH = 10;      // multiples of TICK_RESOLUTION
+    startBtn.value = TIMER_LENGTH * TICK_RESOLUTION;
+    
+    startBtn.addEventListener("click", startStopTimer);
+    stopBtn.addEventListener("click", startStopTimer);
+    document.addEventListener("visibilityChange", tick);
+    
+    let endTime, timeHdl;
+    function startStopTimer(event) {
+        endTime = performance.now() + Number(event.target.value);        
+        tick();
+    }
+    function tick() {
+        clearTimeout(timeHdl);
+        var till = endTime - performance.now();
+        till = till <= 0 ? 0 : till;                
+        if (till) {
+            if (document.visibilityState === "visible") {
+                stopBtn.disabled = false;
+                timeEl.textContent = (till / TICK_RESOLUTION + 1 | 0);
+            }
+            timeEl.dateTime = "PT0H0M" + (till / TICK_RESOLUTION + 1 | 0) + "S";
+            timeHdl = setTimeout(tick, (till % TICK_RESOLUTION) + 10);
+        } else {
+            timeEl.dateTime = "PT0H0M0S";
+            timeEl.textContent = 0;
+            stopBtn.disabled = true;
+        }
+    }
+}
