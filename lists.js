@@ -14,7 +14,7 @@ form.addEventListener('submit', (e) => {
 })
 
 const addButton = document.getElementById("addButton");
-const input = document.getElementById("habitinput");
+const input = document.getElementById("input");
 const ul = document.querySelector("ul");
 const item = document.getElementsByTagName("li");
 
@@ -31,10 +31,6 @@ function createListElement() {
 	li.appendChild(document.createTextNode(input.value)); //makes text from input field the li text
 	ul.appendChild(li); //adds li to ul
 	input.value = ""; //Reset text input field
-
-	function addClass(){
-		li.className += "checkbox"
-	}
 
 	//START STRIKETHROUGH
 	// because it's in the function, it only adds it for new items
@@ -80,6 +76,8 @@ function createListElement() {
 		checkBtn2.setAttribute("type","checkbox")
 		checkBox.appendChild(checkBtn2)
 	}
+
+	addCheckboxes()
 
 	// checkBtn.addEventListener("click", )
 	// END ADD CHECKBOXES
