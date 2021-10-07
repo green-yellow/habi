@@ -35,7 +35,7 @@ header{
 }
 main{
     border-radius:0px 0px 5px 5px;
-    padding-bottom:100px;
+    padding-bottom:50px;
     margin-bottom: 50px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
@@ -59,15 +59,15 @@ menu .active{
     background-color:lightblue;
 }
 
-menu a:hover{
+/* menu a:hover{
     background-color:#FFCF52;
-}
+} */
 
-input [type="checkbox"]{
+/* input [type="checkbox"]{
     float:left;
     width:50px;
 
-}
+} */
 
 .instructions{
     background-color: #3D4959;
@@ -75,6 +75,10 @@ input [type="checkbox"]{
     margin:20px 200px 10px 0px;
     border-radius: 0px 5px 5px 5px;
     color:white;
+}
+
+.instructions a{
+    text-align:right;
 }
 
 .container{
@@ -105,13 +109,19 @@ input [type="checkbox"]{
     padding:20px;
 }
 
+.timer p{
+    font-size: 12px;
+}
+
 .inputrow{
     display:flex;
 }
 
 .steptwo,
 .stepthree,
-.stepfour{
+.stepfour,
+.stepfive,
+.stepsix{
     display:none;
 }
 
@@ -124,11 +134,15 @@ input [type="checkbox"]{
 	list-style: none;
 	padding: 20px 20px;
 	color: black;
-	text-transform: capitalize;
+	/* text-transform: capitalize; */
 	font-weight: 600;
 	margin-bottom: 10px;
 	background: lightblue;
     border-radius: 5px;
+}
+
+.col-12 .miki {
+    background-color: #CCEB75;
 }
 
 li > button {
@@ -154,6 +168,16 @@ li > button {
     font-weight: 600;
 }
 
+.responsebuttons button{
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.responsebuttons button:hover{
+    background-color: transparent;
+    border: 1px solid black;
+}
+
 .delete {
 	display: none;
 }
@@ -164,6 +188,8 @@ li > button {
 
 #buttons{
     margin-top:50px;
+    display:flex;
+    justify-content: right;
 }
 
 #enterbutton,
@@ -196,6 +222,7 @@ li > button {
 
 #nextbutton {
     float:right;
+    margin-left:20px;
 }
 
 #nextbutton:hover {
@@ -255,19 +282,12 @@ li > button {
 
 #feelings div:hover{
     border: 2px gray solid;
-    font-weight:700;
-}
-
-#feelings div:visited,
-#feelings a:visited{
-    border: 2px black solid;
-    font-weight:700;
 }
 
 #feelings img{
     width:80px;
     height:80px;
-    border:solid black 1px;
+    /* border:solid black 1px; */
     border-radius: 100px;
 }
 
@@ -276,14 +296,19 @@ li > button {
     margin:0px;
 }
 
-/*INPUT STYLING*/
+#timerimg{
+    width:50%;
+}
+
 #welcomeinput{
     display:flex;
 }
 
+/*INPUT STYLING*/
 #nicknameinput,
 #affinput,
-#input{
+#input,
+#saymore{
     border:lightgray solid 1px;
     border-radius: 5px;
     padding:20px;
@@ -291,6 +316,8 @@ li > button {
     margin-right:5px;
     width:100%;
     font-size: 16px;
+    /* inline-size:150px;
+    overflow-wrap: break-word; */
 }
 
 

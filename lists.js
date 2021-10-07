@@ -77,7 +77,7 @@ function createListElement() {
 		checkBox.appendChild(checkBtn2)
 	}
 
-	addCheckboxes()
+	// addCheckboxes()
 
 	// checkBtn.addEventListener("click", )
 	// END ADD CHECKBOXES

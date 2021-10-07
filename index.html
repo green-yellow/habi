@@ -13,83 +13,89 @@
         <img id="logoicon" src="./img/iconggroup.png" alt="chick hatching progression icons">
         <menu>
             <a class="active" href="./index.html">check-in</a>
-            <a href="./2lists.html">lists</a>
-            <a href="./3timer.html">timer</a>
+            <a class="next">lists</a>
+            <a class="next">timer</a>
         </menu>
     </header>
 
 
     <main>
         <section id="check-in">
-            <div class="instructions" id="welcomeheader"> 
-                <h2>hello what's your name?</h2>
-            </div>
             <form class="nameform">
-                <div id="welcomeinput">
-                    <label for="nicknameinput"></label>
-                    <input type="text" id="nicknameinput" placeholder="write your nickname..." name="Nickname" >
-                    <input type="submit" id="enterbutton" class="button" value="enter">
+                <div class="instructions" id="welcomeheader"> 
+                    <h2>hello what's your name?</h2>
                 </div>
-            </form>
-            <div class="steptwo">
-                <div class="instructions">
-                    <h2>check-in:</h2> 
-                    <h2>how are you feeling?</h2>
-                </div>
-                <div class="container">
-                    <h2>I feel...</h2>
-                    <div id="feelings">
-                        <div >
-                            <img src="./img/Good.png" alt="">
-                            <p>good</p>
-                        </div>
-                        <div>
-                            <img src="./img/Okay.png" alt="">
-                            <p>okay</p>
-                        </div>
-                        <div>
-                            <img src="./img/Sick.png" alt="">
-                            <p>sick</p>
-                        </div>
-                        <div>
-                            <img src="./img/Sheet.png" alt="">
-                            <p>sheety</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="stepthree">
-                <div class="response">
-                    <!-- Empty Response -->
-                    <div class="listItems col-12">
-                        <h2>that makes sense! <br>I'm sorry.<br> love you <3 </h2>
-                    </div>
-                </div>
-
-
-                <div class="instructions">
-                    <h2>write yourself some affirmations</h2>
-                </div>
-                <form class="affform">
-                    <div class="col-12 inputrow">
-                        <input id="affinput" type="text" placeholder="ex: I'm a bad bitch" name="Affirmations">
-                        <input type="submit" id="addButton" class="button" value="+ add">
+                <form>
+                    <div id="welcomeinput">
+                        <label for="nicknameinput"></label>
+                        <input type="text" id="nicknameinput" placeholder="give yourself a nickname..." name="Nickname" >
+                        <button id="enterbutton" class="button" >enter</button>
                     </div>
                 </form>
-                <!-- Empty List -->
-                <div class="row">
-                    <div class="listItems col-12">
-                        <ul class="col-12 offset-0 col-sm-8 offset-sm-2 aff">
-                        </ul>
+                <div class="steptwo">
+                    <div class="instructions">
+                        <h2>check-in:</h2> 
+                        <h2>how are you feeling?</h2>
+                    </div>
+                    <div class="container">
+                        <h2>I feel...</h2>
+                        <div id="feelings">
+                            <div class="good">
+                                <img src="./img/Good.png" alt="">
+                                <p>good</p>
+                            </div>
+                            <div class="okay">
+                                <img src="./img/Okay.png" alt="">
+                                <p>okay</p>
+                            </div>
+                            <div class="sick">
+                                <img src="./img/Sick.png" alt="">
+                                <p>sick</p>
+                            </div>
+                            <div class="sheety">
+                                <img src="./img/Sheet.png" alt="">
+                                <p>sheety</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="stepfour">
-                <section id="buttons">
-                    <!--<a class="button" id="backbutton" href="./1welcome.html">< back</a>-->
-                    <a class="button" id="nextbutton" href="./2lists.html">next ></a>
-                </section>
-            </div>
+                <div class="stepthree">
+                    <div class="response">
+                        <h2 class="feelingreply"></h2>
+                    </div>
+                
+               
+                    <div>
+                        <input type="text" name="Say more" id="saymore" placeholder="optional: say more on how you're feeling">
+                    </div>
+                
+                
+                    <div class="instructions">
+                        <h2>growth mindset: </h2><p>write some affirmations.</p> <p> acknowledge your effort, focus, strategy, perserverance and improvements! </p>
+                    </div>
+                    <form class="affform">
+                        <div class="col-12 inputrow">
+                            <input id="affinput" type="text" placeholder="ex: I'm growing 🌵🦕🌵 " name="Affirmations">
+                            <input type="submit" id="addButton" class="button" value="+ add">
+                        </div>
+                    </form>
+                        <!-- Empty List -->
+                    <div class="row">
+                        <div class="listItems col-12">
+                            <ul class="col-12 offset-0 col-sm-8 offset-sm-2 aff">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="stepfour"></div>
+                    <section id="buttons">
+                        <!--<a class="button" id="backbutton" href="./1welcome.html">< back</a>-->
+                        <input type="submit" class="button" id="nextbutton"  value="save">
+                        <a class="button" id="nextbutton" href="./2lists.html">next ></a>
+                    </section>
+                </div>
+            </form>
+        </section>
     </main>
     
     <footer>
